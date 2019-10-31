@@ -1,0 +1,704 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="653.6,724.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap2010:Annotation.AnnotationText="This process opens a web browser and shows the UiPath academy." DisplayName="Demo UiPath Academy" sap:VirtualizedContainerService.HintSize="633.6,664.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,165.6</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID12</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,165.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="475.2,5272.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open www.academy.uipath.com" Hidden="False" sap:VirtualizedContainerService.HintSize="433.6,5180" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="www.uipath.com">
+          <ui:OpenBrowser.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,5080" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'client  Address Bar'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3cc7cc5400f1ca7a9a088f733e181dac" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Robotic Process Automation | UiPath - Internet Explorer' /&gt;&lt;wnd cls='Address Band Root' title='Address Bar' /&gt;&lt;ctrl name='Address Bar' role='client' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <ui:CalloutScope DisplayName="Callout for website" sap:VirtualizedContainerService.HintSize="333.6,229.6" sap2010:WorkflowViewState.IdRef="CalloutScope_1">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;You can find the best RPA Academy via our website.&lt;/b&gt;\n&lt;a href=\&quot;https://www.uipath.com\&quot;&gt;www.uipath.com&lt;/a&gt;\n&lt;style&gt; a:link {color: orange;background-color:transparent;text-decoration: none; }&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;tag&quot;:&quot;p&quot;,&quot;id&quot;:&quot;ebkjqa&quot;},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;id&quot;:&quot;e1b1ged&quot;},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;leftIcon&quot;:&quot;&quot;,&quot;rightIcon&quot;:&quot;&quot;,&quot;block&quot;:false,&quot;action&quot;:&quot;submit&quot;,&quot;id&quot;:&quot;elw5ven&quot;}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_1" TimeoutInSeconds="5" Width="250">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID0" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID1" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="970e1fac875d44df7d35f0fc70e5f6ed" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Robotic Process Automation | UiPath - Internet Explorer' /&gt;&#xD;&#xA;&lt;wnd cls='Address Band Root' title='Address Bar' /&gt;&#xD;&#xA;&lt;ctrl name='Address Bar' role='client' /&gt;&#xD;&#xA;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="300" DisplayName="Navigate to Button Developers" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5b9995ffe2a4ff15dc30f910c6d0bd14" Selector="&lt;webctrl aaname='Developers' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Button Developer" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_1" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1ec31f0cfe40df61e561e203d36effb3" Selector="&lt;webctrl aaname='UiPath Academy' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Press Button Developer" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="88" OffsetY="40" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9a353de6a2c8cee4e0d6d350f82e3e16" Selector="&lt;webctrl aaname='UiPath Academy' tag='A' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Button Academy" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_2" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1ec31f0cfe40df61e561e203d36effb3" Selector="&lt;webctrl aaname='Go to Trainings' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:CalloutScope DisplayName="Callout for Academy" sap:VirtualizedContainerService.HintSize="333.6,191.2" sap2010:WorkflowViewState.IdRef="CalloutScope_2">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID2}" Argument2="{x:Reference __ReferenceID3}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;You can navigate through our website or you can use the direct link to the Academy.&lt;/b&gt;\n&lt;a href=\&quot;https://academy.uipath.com\&quot;&gt;www.academy.uipath.com&lt;/a&gt;\n&lt;style&gt; a:link {color: orange;background-color:transparent;text-decoration: none; }&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;tag&quot;:&quot;p&quot;,&quot;id&quot;:&quot;e9h8utn&quot;},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;id&quot;:&quot;egy6nw6u&quot;},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;leftIcon&quot;:&quot;&quot;,&quot;rightIcon&quot;:&quot;&quot;,&quot;block&quot;:false,&quot;action&quot;:&quot;submit&quot;,&quot;id&quot;:&quot;exvn5af&quot;}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="140" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_2" TimeoutInSeconds="5" Width="260">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_3">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID2" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_4">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID3" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;webctrl aaname='Go to Trainings' tag='A' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Press Button Academy" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="59" OffsetY="12" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6f7e5d71b8a0ea28c7fdf49f53203621" Selector="&lt;webctrl aaname='Go to Trainings' tag='A' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Hover DelayMS="{x:Null}" DelayBefore="500" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_20" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="71fe3bd079b44bf564bde22793b660bb" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:CalloutScope DisplayName="Callout for RoleBased Trainings" sap:VirtualizedContainerService.HintSize="333.6,229.6" sap2010:WorkflowViewState.IdRef="CalloutScope_3">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID4}" Argument2="{x:Reference __ReferenceID5}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;Our trainings are organized by roles which combine individual courses together.&lt;/b&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;},&quot;reorder&quot;:false},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[]},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_3" TimeoutInSeconds="5" Width="260">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_5">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID4" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_6">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID5" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="970e1fac875d44df7d35f0fc70e5f6ed" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl idx='1' parentid='panel-0' tag='I' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_21" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7771f1d55c6b723fdf2a97c1b175f6e7" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_22" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9064774731428a652e1774d611733713" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_23" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b01e99c7a890025b64bc597c46a05bcb" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_24" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="70d0a6b49328027b9284e1ad709580cc" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /learn/public/learni...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="25a64b9b5233d1201654db2c9e1feb2f" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;catalog-component&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;catalog-page&amp;gt;dynamic-widget-page&amp;gt;widget-render&amp;gt;div&amp;gt;structure-row-widget&amp;gt;div&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;structure-column-widget&amp;gt;widget-children-wrapper&amp;gt;div&amp;gt;catalog-widget&amp;gt;div&amp;gt;div&amp;gt;data-browser&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tile-group&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;carousel-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'A  #panel-0'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_25" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b32cae120549b444cfcfeff6d4d3020c" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl aaname='About this Learning Plan' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:CalloutScope DisplayName="Callout for Learning Plan" sap:VirtualizedContainerService.HintSize="333.6,229.6" sap2010:WorkflowViewState.IdRef="CalloutScope_4">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID6}" Argument2="{x:Reference __ReferenceID7}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;The Learning Plan defines the clear objectives of this role based training.&lt;/b&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;tag&quot;:&quot;p&quot;,&quot;id&quot;:&quot;eh9add9&quot;},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;id&quot;:&quot;emvu2si&quot;},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;leftIcon&quot;:&quot;&quot;,&quot;rightIcon&quot;:&quot;&quot;,&quot;block&quot;:false,&quot;action&quot;:&quot;submit&quot;,&quot;id&quot;:&quot;eadq20k&quot;}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_4" TimeoutInSeconds="7" Width="260">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_7">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID6" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_8">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID7" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2107b2685b91d09f4733b6dcad7bae7d" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl aaname='About this Learning Plan' tag='A' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_26" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9561cac237b28932e1048591513622bf" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='panel-0' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #panel-1'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2107b2685b91d09f4733b6dcad7bae7d" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl aaname='Learning Plan Structure' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:CalloutScope DisplayName="Callout for Learning Structure" sap:VirtualizedContainerService.HintSize="333.6,229.6" sap2010:WorkflowViewState.IdRef="CalloutScope_6">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID8}" Argument2="{x:Reference __ReferenceID9}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;The Learning Plan Structure shows the individual courses to complete the training.&lt;/b&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;tag&quot;:&quot;p&quot;,&quot;id&quot;:&quot;even0ic&quot;},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;id&quot;:&quot;en0n2ge&quot;},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;leftIcon&quot;:&quot;&quot;,&quot;rightIcon&quot;:&quot;&quot;,&quot;block&quot;:false,&quot;action&quot;:&quot;submit&quot;,&quot;id&quot;:&quot;eiss24r&quot;}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_6" TimeoutInSeconds="7" Width="260">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_11">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID8" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_12">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID9" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2107b2685b91d09f4733b6dcad7bae7d" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl aaname='Learning Plan Structure' tag='A' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:Hover DelayMS="{x:Null}" DelayBefore="500" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_27" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="128e3654bdc4bf6eda4171c73d1a06fa" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;ng-component&amp;gt;accordion&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='panel-' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_28" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5584d54fe8fef9a77250a3a6fb40b1ec" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;ng-component&amp;gt;accordion&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='panel-' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_29" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ec63459198a1c0015c37ca3ba0fb75f0" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;ng-component&amp;gt;accordion&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='panel-' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_30" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3d039115f4cd03cfdc806f30477f3479" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;ng-component&amp;gt;accordion&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='panel-' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_31" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="362714c31ea22e4f7bfa2a11bad68998" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dcl-wrapper&amp;gt;ng-component&amp;gt;accordion&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='panel-' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_32" SendWindowMessages="False" SimulateHover="False">
+                  <ui:Hover.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Hover.CursorPosition>
+                  <ui:Hover.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="570a15e7c32362ce5817a88ca51e5076" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;enrollment&amp;gt;div&amp;gt;div&amp;gt;rectangular-button&amp;gt;button&amp;gt;div&amp;gt;span' idx='2' parentid='loading-wrap-container' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Hover.Target>
+                </ui:Hover>
+                <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="570a15e7c32362ce5817a88ca51e5076" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ng-component&amp;gt;ecommerce-layout&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;ng-component&amp;gt;div&amp;gt;div&amp;gt;course-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;enrollment&amp;gt;div&amp;gt;div&amp;gt;rectangular-button&amp;gt;button&amp;gt;div&amp;gt;span' idx='2' parentid='loading-wrap-container' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:CalloutScope DisplayName="Callout for Register" sap:VirtualizedContainerService.HintSize="333.6,229.6" sap2010:WorkflowViewState.IdRef="CalloutScope_5">
+                  <ui:CalloutScope.CalloutForm>
+                    <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID10}" Argument2="{x:Reference __ReferenceID11}">
+                      <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;b&gt;Any questions?&lt;/b&gt;\n&lt;br&gt;&lt;br&gt;\n&lt;b&gt;Register today and get started!&lt;/b&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;html&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;tag&quot;:&quot;p&quot;,&quot;id&quot;:&quot;e7ka57r&quot;},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;className&quot;:&quot;&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div class=\&quot;well\&quot;&gt;Content&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:false,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;&quot;,&quot;when&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;reorder&quot;:false,&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;customClass&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;defaultValue&quot;:null,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:false,&quot;labelPosition&quot;:&quot;top&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;id&quot;:&quot;eguhfa&quot;},{&quot;label&quot;:&quot;OK&quot;,&quot;labelPosition&quot;:&quot;bottom&quot;,&quot;theme&quot;:&quot;warning&quot;,&quot;size&quot;:&quot;sm&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;state&quot;:&quot;&quot;,&quot;shortcut&quot;:&quot;&quot;,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;custom&quot;:&quot;&quot;,&quot;customPrivate&quot;:false},&quot;conditional&quot;:{&quot;show&quot;:&quot;false&quot;,&quot;when&quot;:&quot;title&quot;,&quot;json&quot;:&quot;&quot;,&quot;eq&quot;:&quot;&quot;},&quot;properties&quot;:{},&quot;customConditional&quot;:&quot;&quot;,&quot;logic&quot;:[],&quot;customClass&quot;:&quot;text-right&quot;,&quot;showValidations&quot;:false,&quot;event&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;custom&quot;:&quot;&quot;,&quot;reorder&quot;:false,&quot;placeholder&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;multiple&quot;:false,&quot;protected&quot;:false,&quot;unique&quot;:false,&quot;persistent&quot;:false,&quot;hidden&quot;:false,&quot;clearOnHide&quot;:true,&quot;dataGridLabel&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;description&quot;:&quot;&quot;,&quot;errorLabel&quot;:&quot;&quot;,&quot;tooltip&quot;:&quot;&quot;,&quot;hideLabel&quot;:false,&quot;tabindex&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;autofocus&quot;:false,&quot;dbIndex&quot;:false,&quot;customDefaultValue&quot;:&quot;&quot;,&quot;calculateValue&quot;:&quot;&quot;,&quot;allowCalculateOverride&quot;:false,&quot;widget&quot;:null,&quot;refreshOn&quot;:&quot;&quot;,&quot;clearOnRefresh&quot;:false,&quot;validateOn&quot;:&quot;change&quot;,&quot;leftIcon&quot;:&quot;&quot;,&quot;rightIcon&quot;:&quot;&quot;,&quot;block&quot;:false,&quot;action&quot;:&quot;submit&quot;,&quot;id&quot;:&quot;el3g4ne&quot;}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100110&quot;,&quot;Name&quot;:&quot;Blue&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-blue.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="120" sap:VirtualizedContainerService.HintSize="260,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_5" TimeoutInSeconds="7" Width="260">
+                        <uca:CallOutActivity.CalloutFieldsCollection>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </uca:CallOutActivity.CalloutFieldsCollection>
+                        <uca:CallOutActivity.TargetElementPosition>
+                          <InArgument x:TypeArguments="sd:Rectangle">
+                            <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_9">
+                              <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID10" Name="TargetElementPosition" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetElementPosition>
+                        <uca:CallOutActivity.TargetWindowHandle>
+                          <InArgument x:TypeArguments="s:IntPtr">
+                            <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_10">
+                              <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID11" Name="TargetWindowHandle" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </uca:CallOutActivity.TargetWindowHandle>
+                      </uca:CallOutActivity>
+                    </ActivityFunc>
+                  </ui:CalloutScope.CalloutForm>
+                  <ui:CalloutScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2107b2685b91d09f4733b6dcad7bae7d" Selector="&lt;html title='UiPath RPA Academy' /&gt;&lt;webctrl aaname='Register' parentid='dialog-login' tag='A' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CalloutScope.Target>
+                </ui:CalloutScope>
+                <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'iexplore.exe UiPath'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="fc65f09212435abc8a8a9c32c933547d" WaitForReady="INTERACTIVE" />
+              </Sequence>
+            </ActivityAction>
+          </ui:OpenBrowser.Body>
+        </ui:OpenBrowser>
+      </Sequence>
+    </FlowStep>
+  </Flowchart>
+</Activity>
