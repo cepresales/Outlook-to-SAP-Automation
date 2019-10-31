@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>697.6,1507.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697.6,1539.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -78,7 +78,7 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="This process ckecks the client mail inbox (dedicated specific folder for demos)." DisplayName="Check e-mails" sap:VirtualizedContainerService.HintSize="677.6,1407.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="This process ckecks the client mail inbox (dedicated specific folder for demos). The identified e-mail attachments are analyzed with OCR and ML (AI Fabric). Extracted data runs through Validation Station before stored in MS Excel. This process can complete the job by entering the extracted data to SAP." DisplayName="Check e-mails" sap:VirtualizedContainerService.HintSize="677.6,1439.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Outlook e-mail folder to monitor" Default="Demo\Invoices" Name="mail_folder" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="File system folder to archive documents from mail check" Default="C:\UiPath\Robot\Documents" Name="doc_folder" />
